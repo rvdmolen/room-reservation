@@ -1,0 +1,18 @@
+.app-header {
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(50,50,50,.4);
+  border-bottom: 1px solid #c1cedb;
+  padding: 15px 0;
+  text-align: center;
+  img {
+    display: inline-block;
+    width: 125px;
+  }
+}
+
+.wrapper {
+  max-width: 800px;
+  width: 96%;
+  margin: 0 auto;
+  position: relative;
+}

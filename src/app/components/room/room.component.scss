@@ -1,0 +1,17 @@
+.rotate {
+
+  /* Safari */
+  -webkit-transform: rotate(-90deg) 2s;
+
+  /* Firefox */
+  -moz-transform: rotate(-90deg) 2s;
+
+  /* IE */
+  -ms-transform: rotate(-90deg) 2s;
+
+  /* Opera */
+  -o-transform: rotate(-90deg) 2s;
+
+  float: left;
+
+}
