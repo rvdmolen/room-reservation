@@ -1,5 +1,7 @@
 
-<div>
-   Hello
-  <p class="rotate"> Hi There! </p>
+<div class="room-container" style="" (click)="toggleOpen()" [ngClass]="{'close_container': openend === false }">
+  <p>Room: {{name}}</p>
+  <div id="container_1">
+    <div id="container_2" [ngClass]="{'opened_container': openend === true }"></div>
+  </div>
 </div>

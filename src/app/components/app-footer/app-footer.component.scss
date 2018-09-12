@@ -1,0 +1,21 @@
+.app-footer {
+  background: #fff;
+  border-top: 1px solid #c1cedb;
+
+  text-align: center;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 800px;
+  width: 96%;
+  margin: 0 auto;
+  position: relative;
+}
+
+p {
+  font-weight: bold;
+}

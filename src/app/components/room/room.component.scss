@@ -1,17 +1,46 @@
-.rotate {
 
-  /* Safari */
-  -webkit-transform: rotate(-90deg) 2s;
+#container_2 {
+  border: 0px solid;
+  width: 2em;
+  height: 0.15em;
+  transition: .3s all;
+  color: dimgray;
+  background-color: dimgray;
+  left: 50%;
+  position: relative;
+  pointer: hand;
+}
 
-  /* Firefox */
-  -moz-transform: rotate(-90deg) 2s;
 
-  /* IE */
-  -ms-transform: rotate(-90deg) 2s;
 
-  /* Opera */
-  -o-transform: rotate(-90deg) 2s;
+.opened_container {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transform-origin: left 10%;
+}
 
+.opened_container_hover:hover {
+  background-color: lighten(#FF6200, 10%);
+}
+
+.close_container {
+  background-color: indianred;
+}
+
+#container_1 {
+  top: 121px;
+  position: relative;
+}
+
+.room-container {
+  height: 100%;
+  cursor: pointer;
+}
+
+
+p {
   float: left;
-
+  margin-left: 50px;
+  margin-top: 20px;
 }
