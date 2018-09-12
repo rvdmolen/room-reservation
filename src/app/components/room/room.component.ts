@@ -1,34 +1,27 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Store} from '../../store';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'room',
   templateUrl: './room.component.html',
   styleUrls: ['./room.component.scss']
 })
-export class RoomComponent implements OnInit {
+export class RoomComponent {
 
-  public openend: boolean;
+  public openend: boolean = true;
 
   @Input('name')
   public name: string;
 
   constructor(private store: Store) {
-    this.openend = true;
-
-  }
-
-  ngOnInit() {
-    let nrOfFreeItems = this.store.value;
-    console.log(nrOfFreeItems);
-
-    //this.store.set('free', nrOfFreeItems++);
   }
 
   toggleOpen() {
     this.openend = !this.openend;
-    console.log(this.openend);
+    let nrOfFreeItems: number = this.store.value.free;
+    let nrOfOccupiedItems: number = this.store.value.occupied;
+    this.store.set('free', (this.openend) ? nrOfFreeItems+1 : nrOfFreeItems-1);
+    this.store.set('occupied', (this.openend) ? nrOfOccupiedItems-1 : nrOfOccupiedItems+1);
   }
 
 

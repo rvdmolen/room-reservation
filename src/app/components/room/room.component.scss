@@ -3,10 +3,10 @@
   border: 0px solid;
   width: 2em;
   height: 0.15em;
-  transition: .3s all;
+  transition: .8s all;
   color: dimgray;
   background-color: dimgray;
-  left: 50%;
+  left: 30%;
   position: relative;
   pointer: hand;
 }
@@ -17,7 +17,7 @@
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  transform-origin: left 10%;
+  transform-origin: left 0.1em;
 }
 
 .opened_container_hover:hover {

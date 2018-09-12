@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Store} from '../../store';
 
 @Component({
   selector: 'rooms',
@@ -20,7 +20,10 @@ export class RoomsComponent implements OnInit {
     {name: '9'}
   ];
 
-  constructor() { }
+  constructor(private store: Store) {
+    store.set('free', this.rooms.length);
+    store.set('occupied', 0);
+  }
 
   ngOnInit() {
   }

@@ -3,8 +3,8 @@ import {distinctUntilChanged, pluck} from 'rxjs/operators';
 
 
 export interface State {
-  free: any,
-  occupied: any
+  free: number,
+  occupied: number
 }
 
 const state: State = {
@@ -22,7 +22,7 @@ export class Store {
   }
 
   select<T>(name: string): Observable<T> {
-    return this.store.pipe(pluck('name'));
+    return this.store.pipe(pluck(name));
   }
 
   set(name: string, state: any) {
